@@ -52,4 +52,8 @@ class Song
     song
   end
 
+  def destroy_all
+    @@all = []
+  end
+
 end
