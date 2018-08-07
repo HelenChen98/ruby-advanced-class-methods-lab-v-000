@@ -16,13 +16,13 @@ class Song
   end
   def self.new_by_name(song_name)
     song = self.new
-    song.name = song_name  
-    song  
-  end 
+    song.name = song_name
+    song
+  end
   def self.create_by_name(song_name)
     song = self.create
     song.name = song_name
-    song 
+    song
   end
   def self.find_by_name(song_name)
     self.all.detect { |song| song.name == song_name }
@@ -37,19 +37,19 @@ class Song
     title = filename.split(" - ")
     artist = title[0]
     song_name, extension = title[1].split(".")
-    song = self.new 
-    song.artist_name = artist 
-    song.name = song_name 
-    song 
+    song = self.new
+    song.artist_name = artist
+    song.name = song_name
+    song
   end
   def self.create_from_filename(filename)
     title = filename.split(" - ")
     artist = title[0]
     song_name, extension = title[1].split(".")
     song = self.create 
-    song.artist_name = artist 
-    song.name = song_name 
-    song 
+    song.artist_name = artist
+    song.name = song_name
+    song
   end
 
 end
